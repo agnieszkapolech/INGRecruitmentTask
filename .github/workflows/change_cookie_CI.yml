@@ -33,7 +33,7 @@ jobs:
 
     steps:
     - name: install browsers
-      run:
+      run: |
         python -m playwright install
 
     - name: run test in 3 browsers
