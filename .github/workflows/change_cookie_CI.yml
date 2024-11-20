@@ -56,6 +56,6 @@ jobs:
         python -m pip install pytest-playwright
         python -m pip install pytest-xdist
         python -m pip install pytest-html
-        python -m pytest --html=report.html --self-contained-html --browser chromium --browser firefox --browser webkit -n auto
+        python -m pytest --html=report.html --self-contained-html test_change_cookie --browser chromium --browser firefox --browser webkit -n auto
 
       

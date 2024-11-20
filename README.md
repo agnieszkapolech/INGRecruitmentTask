@@ -21,4 +21,4 @@ $ py -m pytest --junitxml=report.xml  --html=report.html --self-contained-html t
 $ py -m pytest test_change_cookie.py --browser chromium --browser firefox --browser webkit -n auto
  flaga n-auto uruchamia testy równolegle, co pozwala skrócić czas wykonywania o połowę w stosunku do uruchamianych testów bez tej flagi
 
-$ py -m pytest --html=report.html --self-contained-html --browser chromium --browser firefox --browser webkit -n auto
+$ py -m pytest --html=report.html --self-contained-html test_change_cookie --browser chromium --browser firefox --browser webkit -n auto
