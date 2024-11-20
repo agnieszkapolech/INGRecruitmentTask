@@ -35,7 +35,7 @@ jobs:
 
     steps:
     - name: run test in 3 browsers
-      run:
+      run: |
         source venv/bin/activate
         python -m pip list
         python -m pytest --html=report.html --self-contained-html --browser chromium --browser firefox --browser webkit -n auto
