@@ -36,4 +36,5 @@ jobs:
     - name: run test in 3 browsers
       run:
         python -m pytest --html=report.html --self-contained-html --browser chromium --browser firefox --browser webkit -n auto
+        
       
