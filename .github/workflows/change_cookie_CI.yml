@@ -10,7 +10,7 @@ on:
 
 jobs:
   install_components:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Check Python version
@@ -35,7 +35,7 @@ jobs:
 
 
   run_playwright_tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: install_components
 
     steps:
