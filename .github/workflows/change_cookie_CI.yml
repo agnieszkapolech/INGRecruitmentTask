@@ -23,6 +23,7 @@ jobs:
         python -m venv venv
         source venv/bin/activate
         python -m pip install --upgrade pip
+        python -m pip install pytest
         python -m pip install pytest-playwright
         python -m playwright install
         python -m pip install pytest-xdist
