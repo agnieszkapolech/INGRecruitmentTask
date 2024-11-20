@@ -24,6 +24,7 @@ jobs:
         source venv/bin/activate
         python -m pip install --upgrade pip
         python -m pip install pytest-playwright
+        python -m playwright install
         python -m pip install pytest-xdist
         python -m pip install pytest-html
 
@@ -34,15 +35,10 @@ jobs:
     steps:
     - name: Check if venv exists
       run: ls -la venv/bin/
-      
-    - name: install browsers
-      run: |
-        python -m venv venv
-        source venv/bin/activate
-        python -m playwright install
 
     - name: run test in 3 browsers
       run:
+        source venv/bin/activate
         python -m pytest --html=report.html --self-contained-html --browser chromium --browser firefox --browser webkit -n auto
 
       
