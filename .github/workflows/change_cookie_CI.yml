@@ -37,7 +37,7 @@ jobs:
     - name: run test in 3 browsers
       run:
         source venv/bin/activate
-        piip list
+        pip list
         python -m pytest --html=report.html --self-contained-html --browser chromium --browser firefox --browser webkit -n auto
 
       
