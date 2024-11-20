@@ -29,6 +29,11 @@ jobs:
         python -m pip install pytest-xdist
         python -m pip install pytest-html
 
+    - name: Check if venv exists
+      run: |
+        ls -la venv/bin/
+
+
   run_playwright_tests:
     runs-on: ubuntu-latest
     needs: install_components
