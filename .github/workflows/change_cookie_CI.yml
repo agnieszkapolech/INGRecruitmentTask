@@ -1,0 +1,39 @@
+name: change_cookie_CI
+
+on:
+  push:
+    branches:
+      - "master"
+  pull_request:
+    branches:
+      - "master"
+
+jobs:
+  install_components:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check Python version
+      uses: setup-python
+      with:
+        python-version: '3.12.0'
+
+    - name: install packags
+      run:
+        py -m venv venv
+        py -m pip install --upgrade pip
+        py -m pip install -r requirements.txt
+
+  run_playwright_tests:
+    runs-on: ubuntu-latest
+    needs: install_components
+
+    steps:
+    - name: install browsers
+      run:
+        py -m playwright install
+
+    - name: run test in 3 browsers
+      run:
+        py -m pytest --html=report.html --self-contained-html --browser chromium --browser firefox --browser webkit -n auto
+      
