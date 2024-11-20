@@ -23,7 +23,9 @@ jobs:
         python -m venv venv
         source venv/bin/activate
         python -m pip install --upgrade pip
-        python -m pip install -r requirements.txt
+        python -m pip install pytest-playwright
+        python -m pip install pytest-xdist
+        python -m pip install pytest-html
 
   run_playwright_tests:
     runs-on: ubuntu-latest
