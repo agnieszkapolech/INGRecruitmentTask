@@ -39,6 +39,10 @@ jobs:
     needs: install_components
 
     steps:
+    - name: Check if venv exists
+      run: |
+        ls -la venv/bin/
+        
     - name: packages list
       run: |
         source venv/bin/activate
