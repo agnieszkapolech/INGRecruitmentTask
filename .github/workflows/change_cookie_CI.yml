@@ -32,6 +32,9 @@ jobs:
     needs: install_components
 
     steps:
+    - name: Check if venv exists
+      run: ls -la venv/bin/
+      
     - name: install browsers
       run: |
         python -m venv venv
