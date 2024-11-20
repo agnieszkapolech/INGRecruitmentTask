@@ -22,7 +22,6 @@ jobs:
       run: |
         python -m venv venv
         source venv/bin/activate
-        python -m playwright
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
 
@@ -33,6 +32,7 @@ jobs:
     steps:
     - name: install browsers
       run:
+        python -m playwright
         python -m playwright install
 
     - name: run test in 3 browsers
