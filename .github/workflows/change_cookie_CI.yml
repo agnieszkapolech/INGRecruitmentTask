@@ -34,6 +34,7 @@ jobs:
     steps:
     - name: install browsers
       run: |
+        python -m playwright
         python -m playwright install
 
     - name: run test in 3 browsers
