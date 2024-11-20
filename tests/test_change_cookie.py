@@ -6,7 +6,7 @@ def test_change_cookie(page):
 
     element = page.locator("label.cookie-policy-switch-label input#CpmAnalyticalOption")
     name_value = element.get_attribute("name")
-    expected_name = "CpmAnalyticalOption"  # Wartość, którą chcesz sprawdzić
+    expected_name = "CpmAnalyticalOption"
 
     assert name_value == expected_name, f"Błąd! Oczekiwana wartość: {expected_name}, a znaleziono: {name_value}"
     print("Poprawnie wybrałeś Cookies analityczne!")
