@@ -32,18 +32,6 @@ jobs:
     - name: Check if venv exists
       run: |
         ls -la venv/bin/
-
-
-  run_playwright_tests:
-    runs-on: ubuntu-22.04
-    needs: install_components
-
-    steps:
-    - name: Make virtual env
-      run: |
-        python -m venv venv
-        source venv/bin/activate
-        ls -la venv/bin/
         
     - name: packages list
       run: |
