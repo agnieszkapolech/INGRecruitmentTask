@@ -13,7 +13,7 @@ Aby móc uruchomić test należy:
 ```
 $ py -m pytest test_change_cookie.py --headed - uruchamia test w widoczną akcją na przeglądarce
 $ py -m pytest --html=report.html --self-contained-html test_change_cookie.py - generuje raport w postaci html
-$ py -m pytest --junitxml=report.xml  --html=report.html --self-contained-html test_change_cookie.py - dodatkowo wtorzy raport w junitxml
+$ py -m pytest --junitxml=report.xml  --html=report.html --self-contained-html test_change_cookie.py - dodatkowo tworzy raport w junitxml
 ```
 
 
