@@ -42,7 +42,7 @@ jobs:
     - name: List files in the repository
       run: |
         ls -la  # Wyświetl wszystkie pliki w repozytorium
-        ls -la tests  # Wyświetl pliki w katalogu tests/
+        ls -la ./tests  # Wyświetl pliki w katalogu tests/
 
     - name: run test in 3 browsers
       run: |
@@ -50,4 +50,4 @@ jobs:
         python -m pip install pytest-playwright
         python -m pip install pytest-xdist
         python -m pip install pytest-html
-        python -m pytest tests/ --html=report.html --self-contained-html -n auto
+        python -m pytest ./tests --html=report.html --self-contained-html -n auto
