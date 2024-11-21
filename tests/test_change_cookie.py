@@ -1,8 +1,8 @@
 def test_change_cookie(page):
 
     page.goto("https://www.ing.pl/")
-    page.get_by_role("button", name="Dostosuj").click()
-    page.locator("label.cookie-policy-switch-label").nth(2).click()
+    page.get_by_role("button", name="Dostosuj", timeout=60000).click()
+    page.locator("label.cookie-policy-switch-label input#CpmAnalyticalOption").click()
 
     element = page.locator("label.cookie-policy-switch-label input#CpmAnalyticalOption")
     name_value = element.get_attribute("name")
