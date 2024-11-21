@@ -50,10 +50,16 @@ jobs:
         source venv/bin/activate
         python -m pip list
 
+
+    - name: List files in the repository
+      run: |
+        ls -la  # Wyświetl wszystkie pliki w repozytorium
+        ls -la tests  # Wyświetl pliki w katalogu tests/
+
     - name: run test in 3 browsers
       run: |
         python -m pip install pytest
         python -m pip install pytest-playwright
         python -m pip install pytest-xdist
         python -m pip install pytest-html
-        python -m pytest tests/ --browser chromium --browser firefox --browser webkit -n auto
+        python -m pytest tests/ --html=report.html --self-contained-html -n auto
